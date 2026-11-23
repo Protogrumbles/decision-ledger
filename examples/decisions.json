@@ -1,0 +1,58 @@
+[
+  {
+    "id": "ADR-0001",
+    "title": "Use a single shared spend dashboard",
+    "context": "Three fictional teams at Northlight Studios track AI spend in three separate spreadsheets, and nobody can answer what the studio spends in a month.",
+    "decision": "Adopt one shared dashboard, updated monthly from exported usage files, owned by the program manager.",
+    "alternatives": "Keep per-team sheets; buy a vendor spend-management tool.",
+    "owner": "sean",
+    "date": "2026-09-01",
+    "review_date": "2026-12-01",
+    "tags": ["spend", "governance"],
+    "status": "active",
+    "superseded_by": null,
+    "supersede_reason": null
+  },
+  {
+    "id": "ADR-0002",
+    "title": "Every agent gets a registry entry before it ships",
+    "context": "Agents at Harbor Lane Studio (fictional) were being deployed with no owner and no record of what data they could touch, so a cost spike took a week to trace.",
+    "decision": "No agent ships without a registry entry: owner, scope, data access, model/tool, and status. Revocation goes through the registry.",
+    "alternatives": "Keep a wiki page updated by hand; require approval in chat only.",
+    "owner": "sean",
+    "date": "2026-09-15",
+    "review_date": "2027-03-15",
+    "tags": ["governance", "agents"],
+    "status": "active",
+    "superseded_by": null,
+    "supersede_reason": null
+  },
+  {
+    "id": "ADR-0003",
+    "title": "Demo data is fictional and labeled as such",
+    "context": "Example data in public repos kept looking like real customer data, which confused reviewers and risked leaking real figures.",
+    "decision": "All sample data in public repos uses fictional names (e.g. Northlight Studios) and is labeled fictional in the README and in the data itself.",
+    "alternatives": "Use anonymized real data; use obviously fake names without labels.",
+    "owner": "sean",
+    "date": "2026-10-01",
+    "review_date": "2027-04-01",
+    "tags": ["privacy", "governance"],
+    "status": "active",
+    "superseded_by": null,
+    "supersede_reason": null
+  },
+  {
+    "id": "ADR-0004",
+    "title": "Kill-switch decisions are recorded, not just acted on",
+    "context": "A tool was paused in a chat thread and nobody could later say who paused it, when, or why — so it was quietly re-enabled.",
+    "decision": "Every pause/kill decision is recorded in the tool's kill-switch list with owner, reason, and timestamp, and the record outlives the action.",
+    "alternatives": "Record pauses in chat only; rely on vendor audit logs.",
+    "owner": "sean",
+    "date": "2026-10-20",
+    "review_date": "2027-01-20",
+    "tags": ["governance", "spend"],
+    "status": "active",
+    "superseded_by": null,
+    "supersede_reason": null
+  }
+]
